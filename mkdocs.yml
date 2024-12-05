@@ -1,0 +1,39 @@
+site_name: THESIS_TITLE
+dev_addr: '127.0.0.1:4444'
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: terminal
+  features:
+    - footer.prev_next
+    - style.links.underline.hide
+
+nav:
+  - Notes: 'notes.md'
+  - Milestones: 'milestones.md'
+  - Sections:
+    - 1. Abstract: 'sections/01-abstract.md'
+    - 2. Introduction: 'sections/02-introduction.md'
+    - 3. Related Work: 'sections/03-related-work.md'
+    - 4. Methodology: 'sections/04-methodology.md'
+    - 5. Experimental Setup: 'sections/05-experimental-setup.md'
+    - 6. Results: 'sections/06-results.md'
+    - 7. Discussion: 'sections/07-discussion.md'
+    - 8. Conclusion: 'sections/08-conclusion.md'
+  - Process:
+    - 1. Literature Survey: 'process/01-literature-survey.md'
+    - 2. Research Question: 'process/02-research-question.md'
+    - 3. Development Environment: 'process/03-development-environment.md'
+    - 4. Exploratory Data Analysis: 'process/04-exploratory-data-analysis.md'
+    - 5. Tracking Experiments: 'process/05-tracking-experiments.md'
+    - 6. Exploring Results: 'process/06-exploring-results.md'
+    - 7. Writing: 'process/07-writing.md'
+  - Guidelines: 'https://manyids2x.nl/guidelines.html'
+  - Rubric: 'https://manyids2x.nl/rubric.pdf'
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - footnotes
