@@ -1,5 +1,8 @@
 # Writing
 
+Current status:  [ good / ok / bad ]
+
+---
 
 ## First draft
 
@@ -12,6 +15,10 @@
 - [ ] Discussion: ___
 - [ ] Conclusion: ___
 
+- [ ] Overall: ___
+
+---
+
 ## Second draft
 
 - [ ] Abstract: ___
@@ -23,3 +30,4 @@
 - [ ] Discussion: ___
 - [ ] Conclusion: ___
 
+- [ ] Overall: ___

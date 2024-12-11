@@ -8,10 +8,18 @@ To follow along with [guidelines](https://manyids2x.nl).
     ```bash
     git clone https://github.com/am00ma/thesis-template
     ```
-2. Install `mkdocs` and `mkdocs-terminal`:
+
+2. Follow instructions from https://docs.astral.sh/uv/getting-started/installation/ to install `uv`.
+
+3. Install virtual environment:
+
     ```bash
-    pip install mkdocs
-    pip install mkdocs-terminal
+
+    # Install the things mentioned in pyproject.toml
+    uv sync
+
+    # Activate the virtual environment (sh)
+    source .venv/bin/activate
     ```
 
 ## Usage
