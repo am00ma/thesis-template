@@ -1,3 +1,25 @@
-uv.lock
-.python-version
-.envrc
+# datasets, outputs
+/data
+/output
+
+# uv related (python packaging)
+/site
+/build
+/src/*.egg-info
+/uv.lock
+
+# cache
+*.pyc
+__pycache__/
+.ipynb_checkpoints/
+events.out.*
+
+# linux environment files
+/.envrc
+/.nvim.lua
+/.rsync
+
+# slurm run script
+/run.sh
+
+# user files

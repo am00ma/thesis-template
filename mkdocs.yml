@@ -1,14 +1,16 @@
-site_name: THESIS_TITLE
-dev_addr: '127.0.0.1:4444'
+site_name: thesis
+dev_addr: '127.0.0.1:5555'
 
 docs_dir: docs
 site_dir: site
 
 theme:
-  name: terminal
-  features:
-    - footer.prev_next
-    - style.links.underline.hide
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - python
+    - bash
+    - json
 
 nav:
   - Notes: 'notes.md'
@@ -37,3 +39,10 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - footnotes
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences

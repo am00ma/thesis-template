@@ -1,21 +1,21 @@
 [project]
 name = "thesis"
 version = "0.1.0"
-description = "Python repository for thesis"
+description = "Add your description here"
 readme = "README.md"
+authors = [
+    { name = "manyids2", email = "arun.mukundan@gmail.com" }
+]
 requires-python = ">=3.12"
 dependencies = [
-    "matplotlib>=3.9.3",
-    "numpy>=2.1.3",
-    "pandas>=2.2.3",
-    "rich>=13.9.4",
-    "scikit-learn>=1.5.2",
+    "datasette>=0.65.1",
+    "pandas>=2.3.0",
+    "rich>=14.0.0",
+    "torch>=2.7.1",
+    "torchvision>=0.22.1",
+    "visidata>=3.2",
 ]
 
-[dependency-groups]
-dev = [
-    "mkdocs>=1.6.1",
-    "mkdocs-material>=9.5.48",
-    "mkdocs-terminal>=4.6.0",
-    "pytest>=8.3.4",
-]
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"

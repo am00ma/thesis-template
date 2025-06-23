@@ -1,0 +1,23 @@
+{
+  "include": [
+    "src"
+  ],
+
+  "exclude": [
+    "**/__pycache__"
+  ],
+
+  "reportMissingImports": "error",
+  "reportMissingTypeStubs": false,
+  "reportAny": false,
+  "reportUnannotatedClassAttribute": false,
+  "reportMissingParameterType": false,
+  "reportUnknownParameterType": false,
+  "reportUnknownMemberType": false,
+  "reportUnusedCallResult": false,
+  "reportAttributeAccessIssue": false,
+  "reportUnknownArgumentType": false,
+  "reportUnknownVariableType": false,
+  "reportImplicitRelativeImport": false,
+  "reportArgumentType": false
+}
