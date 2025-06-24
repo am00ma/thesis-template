@@ -5,14 +5,10 @@ docs_dir: docs
 site_dir: site
 
 theme:
-  name: readthedocs
-  highlightjs: true
-  hljs_languages:
-    - python
-    - bash
-    - json
+  name: material
 
 nav:
+  - Thesis: 'index.md'
   - Notes: 'notes.md'
   - Milestones: 'milestones.md'
   - Sections:
@@ -45,4 +41,7 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+
+plugins:
+  - search
+  - mermaid2

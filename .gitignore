@@ -1,6 +1,7 @@
 # datasets, outputs
 /data
 /output
+/outputs
 
 # uv related (python packaging)
 /site
