@@ -7,7 +7,9 @@ from thesis.config import Config
 from thesis.data import ImageClassification
 from thesis.models import load_model
 from thesis.paths import DATA_DIR
-from thesis.transforms import POSTPROC_FLATTEN
+from thesis.transforms import NMSYoloBoxes
+
+postproc_nms = NMSYoloBoxes(0.3, 0.3)
 
 
 def extract_features(cfg: Config, device: torch.device):
@@ -19,10 +21,9 @@ def extract_features(cfg: Config, device: torch.device):
         split=cfg.data_split,
         seed=cfg.data_seed,
     )
-
     dataloader = DataLoader(dataset, shuffle=False, batch_size=cfg.data_batch_size)
-
     model = load_model(cfg, device, train=False)
+
     data = []
     with torch.no_grad():
         pbar = tqdm(dataloader, total=len(dataloader), desc="Extracting")
@@ -33,8 +34,7 @@ def extract_features(cfg: Config, device: torch.device):
             images = images.to(device)
             out = model(images)
 
-            # Postproc to output
-            out = POSTPROC_FLATTEN(out, batch)
+            out = postproc_nms(out)
 
             data.append(out)
 

@@ -16,5 +16,7 @@
     "reportAttributeAccessIssue": false,
     "reportUnknownArgumentType": false,
     "reportUnknownVariableType": false,
-    "reportImplicitRelativeImport": false
+    "reportImplicitRelativeImport": false,
+    "reportImplicitOverride": false,
+    "reportExplicitAny": false
 }

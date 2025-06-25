@@ -46,6 +46,7 @@
 3. `uv sync`
 4. `uv add`
 5. Set up `pyrightconfig.json`
+6. Ignoring warnings: `python -W ignore::FutureWarning src/thesis/extract.py`
 
 ## Set up snellius
 

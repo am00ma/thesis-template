@@ -14,6 +14,7 @@ dependencies = [
     "mkdocs-mermaid2-plugin>=1.2.1",
     "neoteroi-mkdocs>=1.1.2",
     "pandas>=2.3.0",
+    "pudb>=2025.1",
     "rich>=14.0.0",
     "seaborn>=0.13.2",
     "term-image>=0.7.2",
