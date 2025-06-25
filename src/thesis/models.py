@@ -2,7 +2,7 @@ import torch
 from thesis.config import Config
 
 
-def load_model(cfg: Config) -> torch.nn.Module:
+def load_model(cfg: Config, device: torch.device, train: bool) -> torch.nn.Module:
 
     if "yolo" in cfg.model_name:
 
@@ -28,14 +28,21 @@ def load_model(cfg: Config) -> torch.nn.Module:
         raise KeyError(f"Invalid model_name: {cfg.model_name}")
 
     assert isinstance(model, torch.nn.Module)
+
+    model.to(device=device)
+    if not train:
+        model.eval()
+
     return model
 
 
 if __name__ == "__main__":
+    DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
     cfg = Config(model_name="yolov5s")
-    model = load_model(cfg)
+    model = load_model(cfg, DEVICE, False)
     print(model)
 
     cfg = Config(model_name="unet")
-    model = load_model(cfg)
+    model = load_model(cfg, DEVICE, False)
     print(model)

@@ -10,16 +10,11 @@ from torchvision.transforms import v2
 
 from thesis.paths import DATA_DIR
 from thesis.utils.db import load_db
+from thesis.transforms import TRANSFORM_DEFAULT
 
+
+# idx, image, label, path
 ItemType = tuple[int, torch.Tensor, int, str]
-
-TRANSFORM_DEFAULT = v2.Compose(
-    [
-        v2.ToImage(),
-        v2.Resize((224, 224)),
-        v2.ToDtype(torch.float32, scale=True),
-    ]
-)
 
 
 class ImageClassification(Dataset[ItemType]):

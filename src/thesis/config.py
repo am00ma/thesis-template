@@ -17,6 +17,7 @@ class Config:
     data_split: str = "train"
     data_frac: float = 1.0
     data_seed: int = 7
+    data_batch_size: int = 32
 
     # Model - common
     model_name: str = "yolov5s"
