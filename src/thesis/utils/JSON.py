@@ -1,7 +1,6 @@
 import json
 from pathlib import Path
 
-
 JSONType = dict[str, str | int | float | Path]
 
 
@@ -14,11 +13,11 @@ def save_json(
     """Save JSON dictionary to file, with overrides."""
 
     # New dict to prevent mutation of original
-    new_data = {}
+    new_data = {**data}
 
     # Append any extra data (also overrides info if duplicate keys)
     if overrides is not None:
-        new_data = {**data, **overrides}
+        new_data.update(overrides)
 
     # Convert paths to strings
     for k, v in new_data.items():
